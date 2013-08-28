@@ -5,12 +5,7 @@
 #define REPEAT_FACTOR   (4096)
 #endif
 
-#include "jrand.h"
-
-#ifdef ARM
 #include "exit.h"
-#include "sbrk.h"
-#endif /* ARM */
 
 extern void initialise_trigger();
 extern void stop_trigger();

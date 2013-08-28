@@ -21,7 +21,6 @@
 
 #include "platformcode.h"
 
-#ifdef ARM
 #define ADDR(x)     (*((unsigned long*)(x)))
 
 #define RCC_BASE        0x40021000
@@ -51,22 +50,3 @@ void stop_trigger()
 {
     GPIOC_BSRR = 0x00010000;// bit low
 }
-
-#else
-
-/* Anything to initialize the trigger. */
-void initialise_trigger ()
-{
-}
-
-/* Anything to start the trigger. */
-void start_trigger ()
-{
-}
-
-/* Anything to stop the trigger. */
-void stop_trigger ()
-{
-}
-
-#endif /* ARM */
